@@ -1,14 +1,7 @@
 " autoload/tokyonight.vim
+" TokyoNight Night palette for Vim
 
-function! tokyonight#get_colors(style) abort
-  if a:style ==# 'night'
-    return s:night()
-  endif
-  " fallback
-  return s:night()
-endfunction
-
-function! s:night() abort
+function! tokyonight#get_colors() abort
   return {
     \ 'bg':               '#1a1b26',
     \ 'bg_dark':          '#16161e',
@@ -72,3 +65,4 @@ function! tokyonight#hi(group, fg, bg, attr) abort
   let l:cmd .= ' cterm=' . (a:attr !=# '' ? a:attr : 'NONE')
   execute l:cmd
 endfunction
+

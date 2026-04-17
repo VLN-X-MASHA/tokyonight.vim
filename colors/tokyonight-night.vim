@@ -1,21 +1,10 @@
-" colors/tokyonight.vim
+" colors/tokyonight-night.vim
+" TokyoNight Night colorscheme for Vim
 
 " Usage:
-"   let g:tokyonight_style = 'night'  " only 'night' available
-"   colorscheme tokyonight
+"   set termguicolors
+"   colorscheme tokyonight-night
 
-" ─── Style ────────────────────────────────────────────────────────────────────
-let s:style = get(g:, 'tokyonight_style', 'night')
-
-" Guard: only 'night' is supported
-if s:style !=# 'night'
-  echohl WarningMsg
-  echom "[tokyonight.vim] style '" . s:style . "' not available, falling back to 'night'"
-  echohl None
-  let s:style = 'night'
-endif
-
-" ─── Init ─────────────────────────────────────────────────────────────────────
 set background=dark
 highlight clear
 if exists('syntax_on')
@@ -28,7 +17,7 @@ if !exists('*tokyonight#get_colors')
   finish
 endif
 
-let s:c = tokyonight#get_colors(s:style)
+let s:c = tokyonight#get_colors()
 
 function! s:hi(group, fg, bg, attr) abort
   call tokyonight#hi(a:group, a:fg, a:bg, a:attr)
