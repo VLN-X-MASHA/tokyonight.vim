@@ -22,7 +22,7 @@ if exists('syntax_on')
   syntax reset
 endif
 
-let g:colors_name = 'tokyonight'
+let g:colors_name = 'tokyonight-night'
 
 if !exists('*tokyonight#get_colors')
   finish

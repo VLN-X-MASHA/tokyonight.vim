@@ -17,5 +17,5 @@ set termguicolors
 " Optional: set style (only 'night' available)
 let g:tokyonight_style = 'night'
 
-colorscheme tokyonight
+colorscheme tokyonight-night
 
